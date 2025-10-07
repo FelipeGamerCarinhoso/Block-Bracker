@@ -1,5 +1,5 @@
 //Criar a varivel de velocidade
-velocidade = 3		
+velocidade = 4.5		
 
 /*Agora queremos criar as vidas
 Para criar uma variavel global, usamos global.(Nome da variavel)
@@ -30,4 +30,5 @@ if ! variable_global_exists("vidas"){
 //Mesma lógica para os pontos
 if ! variable_global_exists("pontos"){
 	global.pontos = 0
+	//Agora que ja criamos os blocos vamos mostra-los  na tela, mas antes, vamos 
 }

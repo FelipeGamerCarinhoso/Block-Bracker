@@ -66,4 +66,15 @@ E agora eu pergunto, o que acontece se eu apertar as duas teclas ao mesmo tempo
 movimentacao vai receber -1 + 1, resultando em 0
 Por fim, vamos somar em x, a variavel movimentação vezes a velocidade 
 */
+/*
+Atualmente, o player pode sair pelas laterais do jogo
+Por isso vamos impedir que ele saiu usando novamento o place_meeting()
+Descrição no objBola.step linha 55
+ou seja, se colocarmos andarmos e batemos em uma parede iremos bloquear
+*/
+//Para ambos os lados 
+if place_meeting(x + velocidade * movimentacao, y, objColisao){
+	x -= velocidade * movimentacao 
+}
+
 x += movimentacao * velocidade

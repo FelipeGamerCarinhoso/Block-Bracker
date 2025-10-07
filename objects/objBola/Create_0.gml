@@ -28,6 +28,6 @@ Podemos criar um objeto separado para bolas que proveem de blocos, ok Podmos usa
 Apesar da bola iniciar no lugar certo, ela não segue o player, para seguir Teremos que usar-
 -opura função no step
 */
-isStart = false // futuramente, esta deve ser uma variavel global
+global.isStart = false // futuramente, esta deve ser uma variavel global
 
 
