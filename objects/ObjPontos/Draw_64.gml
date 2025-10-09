@@ -73,3 +73,36 @@ mensagem = string(global.pontos)
 
 //E agora desenhamos na tela
 draw_text(x,y,mensagem)
+/*
+E agora desenhamos na tela, também colocamos para ele ir para o meio da tela 
+Mas, vamos perceber que o texto não esta no meio, pois a horientação normal 
+é na esquerda
+Para trocarmos a direção usaremos a função draw_set_haling():
+
+Para definir a centralização, usaremos as funções:
+draw_set_halign():
+function draw_set_halign(haling: Constant.HAling) ->
+Undefined
+This function is used to align text along the  horizontal axis - 
+- and changing the horizontal alignment will -
+- change the position and direction in which all
+- further text is drawn with the defalt value being fa_left.
+halign Horizontal alignment.
+
+function draw_set_valign(valign: Constant.VAlign) -> Undefined
+This function is used to align text along the vertical axis and
+- changing the vertical alignment will change the position and -
+- direction in which all further text is drawn, with the default -
+- value being fa_top.
+valign Vertical alignment.
+
+Função draw_set_valign(valigfunction draw_set_valign(valign: Constant.VAlign) -> Undefined
+This function is used to align text along the vertical axis and
+- changing the vertical alignment will change the position and -
+- direction in which all further text is drawn, with the default -
+- value being fa_top.
+valign Vertical alignment.
+*/
+draw_set_halign(fa_center)
+draw_set_valign(fa_top)
+draw_text(room_width / 2,y,mensagem)
