@@ -10,3 +10,9 @@ input.
 n1 The low end of the range from which the random number will be selected.
 n2 The high end of the range from which the random number will be selected.
 */
+tipoBloco = irandom_range(1, 15)
+
+if tipoBloco == 15{
+	//Trocar o sprite para um com a bola dentro
+	sprite_index = sprBlocobola
+}

@@ -11,7 +11,18 @@ Então, vamos configurar 4 coisas
 4°Criar uma nova bolinha caso ainda tenha vida
 */
 
+//Vamos mexer alguns componentes de lugar, que queremos por enquanto 
+//É, diminuir a quantidade de bolas, recriar o objMorte e destruir a bola 
+//que saiu, sendo a condição, se a quantyidade de bolas é igual a 0
 //Primeiro, tiramos uma vida 
+global.quantBolas--
+instance_destroy()
+instance_create_layer(x, room_height, "Instances", ObjMorte)
+
+if global.quantBolas > 0{
+	exit
+}
+
 global.vidas--
 
 //Segundo, criar uma animação de morte
@@ -58,4 +69,18 @@ instance_destroy()
 E o último passo, recriar a bolinha encima do player
 */
 instance_create_layer(objPlayer.x, objPlayer.y - 10,"instances", objBola)
-isStart = false
+global.isStart = false
+
+/*
+Percebemos que, quando qualquer bolinha conta como uma vida a menos
+Mesmo ainda tendo uma bolinha ou mais na tela sobrando 
+então o que faremos ?
+Break:
+Vamos usar para sair do laço de repetição quando aparecia 
+Por exemplo, quando um número fosse divisivel por i, ele sai do laço de repetição
+Independente do que aconteceu antes, agora, nós iremos usar algo parecido 
+sendo o Exit
+O Exit sai do código do evento assim que é chamado
+No nosso caso, iremos criar o contador  de bolas e, assim que a ultima
+bolinha sair, aí sim mexeremos na vida
+*/
