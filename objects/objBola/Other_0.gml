@@ -24,7 +24,7 @@ if global.quantBolas > 0{
 }
 
 global.vidas--
-
+global.isStart = false
 //Segundo, criar uma animação de morte
 //Criaremos um novo objeto chamado objMorte
 //Criar novas instancias dentro do código
@@ -47,7 +47,7 @@ Toda vez que quisermos criar uma instancia , usaremos essa função
 quando a bolinha sair, vamos criar a instancia objMorte 
 onde a bolinha saiu.
 */
-instance_create_layer(x, room_height, "instances", ObjMorte)
+// instance_create_layer(x, room_height, "instances", ObjMorte)
 /*
 Agora que testamos e que funcionou, temos que apagar a explosão depois
 de um tempo
@@ -63,13 +63,13 @@ Agora vamos fazer o 3 passo: Destruir a bolinha que saiu
 Isto ja sabemos, basta usar o instance_destroy()
 */
 
-instance_destroy()
+//instance_destroy()
 
 /*
 E o último passo, recriar a bolinha encima do player
 */
 instance_create_layer(objPlayer.x, objPlayer.y - 10,"instances", objBola)
-global.isStart = false
+
 
 /*
 Percebemos que, quando qualquer bolinha conta como uma vida a menos
